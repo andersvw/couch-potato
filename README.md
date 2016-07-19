@@ -2,7 +2,7 @@
 
 Couch Potato is a custom Alexa Skill which provides a voice interface to control a TV or cable box.
 
-There a number of working components to achieve this feat:
+There a number of working components to achieve this feat:  
 1. Alexa Skill  
 2. AWS Lambda function  
 3. Flask web application  
