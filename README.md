@@ -7,9 +7,9 @@ There a number of working components to achieve this feat:
 2. AWS Lambda function  
 3. Flask web application  
 4. Linux Infrared Remote Control (LIRC) module  
-5. IR transmitted circuit 
+5. IR transmitter circuit 
 
-Above is the chronological ordering of the components when completing a request. A user asks Alexa to ask couch potato to complete a given request. The Alexa skill sends a JSON blurb to the Lambda function which parses which intent and other relevant information out and then sends the appropriate HTTP request to the Flask web application running on a Raspberry Pi. The web application then performs the specified action by calling out to the Linux Infrared Remote Control module which has been manually configured with a number of remotes. The LIRC module controls the IR transmitter circuit via the GPIO pins to send signals to the TV and cable box.
+Above is the chronological ordering of the components when completing a request. A user asks Alexa to ask Couch Potato to complete a given request. The Alexa Skill sends a JSON blurb to the AWS Lambda function which parses the Intent and other relevant information out and then sends the appropriate HTTP request to the Flask web application running on a Raspberry Pi. The web app performs the specified action by calling out to the Linux Infrared Remote Control module which has been manually configured with a number of remotes. The LIRC module controls the IR transmitter circuit via the GPIO pins to send signals to the TV and cable box.
 
 Example requests:
 - "Alexa ask Couch Potato to list remotes" - Lists all of the available remotes
