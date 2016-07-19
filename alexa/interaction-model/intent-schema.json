@@ -1,0 +1,70 @@
+{
+  "intents": [
+    {
+      "intent": "GetRemotes"
+    },
+    {
+      "intent": "GetKeys",
+      "slots": [
+        {
+          "name": "Remote",
+          "type": "LIST_OF_REMOTES"
+        }
+      ]
+    },
+    {
+      "intent": "PressKey",
+      "slots": [
+        {
+          "name": "Key",
+          "type": "LIST_OF_KEYS"
+        },
+        {
+          "name": "Remote",
+          "type": "LIST_OF_REMOTES"
+        },
+        {
+          "name": "NumPresses",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "ChangeChannel",
+      "slots": [
+        {
+          "name": "Channel",
+          "type": "LIST_OF_CHANNELS"
+        },
+        {
+          "name": "Remote",
+          "type": "LIST_OF_REMOTES"
+        }
+      ]
+    },
+    {
+      "intent": "Turn",
+      "slots": [
+        {
+          "name": "Option",
+          "type": "LIST_OF_TURN_OPTIONS"
+        },
+        {
+          "name": "Target",
+          "type": "LIST_OF_TURN_TARGETS"
+        },
+        {
+          "name": "Remote",
+          "type": "LIST_OF_REMOTES"
+        },
+        {
+          "name": "NumTimes",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
