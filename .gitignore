@@ -91,3 +91,12 @@ ENV/
 # IDE settings
 .idea/
 
+# Compressed files
+*.zip
+*.tar
+*.gz
+
+# Node.js files
+node_modules/
+package.json
+
