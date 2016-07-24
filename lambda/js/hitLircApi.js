@@ -102,35 +102,35 @@ function changeChannel() {
     if (isNaN(channel)) {
         // TODO: Create DDB table and implement look up
         console.log("Channel = " + channel)
-        switch (channel.toUpperCase()) {
+        switch (channel) {
             case "CBS":
                 channel = 804;
                 break;
             case "ABC":
                 channel = 805;
                 break;
-            case "FOX":
+            case "fox":
                 channel = 806;
                 break;
             case "NBC":
                 channel = 807;
                 break;
-            case "NHL NETWORK":
+            case "NHL network":
                 channel = 822;
                 break;
             case "ESPN":
                 channel = 849;
                 break;
-            case "COMEDY CENTRAL":
+            case "comedy central":
                 channel = 858;
                 break;
             case "AMC":
                 channel = 859;
                 break;
-            case "CARTOON NETWORK":
+            case "cartoon network":
                 channel = 860;
                 break;
-            case "HBO SIGNATURE":
+            case "HBO signature":
                 channel = 869;
                 break;
             case "HBO":
