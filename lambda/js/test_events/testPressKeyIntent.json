@@ -1,0 +1,35 @@
+{
+  "session": {
+    "new": false,
+    "sessionId": "session1234",
+    "attributes": {},
+    "user": {
+      "userId": null
+    },
+    "application": {
+      "applicationId": "amzn1.echo-sdk-ams.app.9dc76818-c3a0-4293-b33e-c74aedec6c34"
+    }
+  },
+  "version": "1.0",
+  "request": {
+    "intent": {
+      "slots": {
+        "Remote": {
+          "name": "Remote",
+          "value": "vizio"
+        },
+        "Key": {
+          "name": "Key",
+          "value": "OK"
+        },
+        "NumPresses": {
+          "name": "NumPresses",
+          "value": 2
+        }
+      },
+      "name": "PressKeyIntent"
+    },
+    "type": "IntentRequest",
+    "requestId": "request5678"
+  }
+}

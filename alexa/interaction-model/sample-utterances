@@ -1,66 +1,66 @@
-GetRemotes get remotes
-GetRemotes list remotes
+GetRemotesIntent get remotes
+GetRemotesIntent list remotes
 
 
-GetKeys get keys for {Remote}
-GetKeys get keys for remote {Remote}
-GetKeys get keys for {Remote} remote
-GetKeys list keys for {Remote}
-GetKeys list keys for remote {Remote}
-GetKeys list keys for {Remote} remote
-
-PressKey press {Key}
-PressKey press {Key} key
-PressKey press key {Key}
-PressKey press {Key} on {Remote}
-PressKey press {Key} key on {Remote}
-PressKey press key {Key} on {Remote}
-PressKey press {Key} on remote {Remote}
-PressKey press {Key} on {Remote} remote
-PressKey press {Key} key on remote {Remote}
-PressKey press {Key} key on {Remote} remote
-PressKey press key {Key} on remote {Remote}
-PressKey press {Key} key on {Remote} remote
-
-PressKey press {Key} {NumPresses} times
-PressKey press {Key} key {NumPresses} times
-PressKey press key {Key} {NumPresses} times
-PressKey press {Key} on {Remote} {NumPresses} times
-PressKey press {Key} key on {Remote} {NumPresses} times
-PressKey press key {Key} on {Remote} {NumPresses} times
-PressKey press {Key} on remote {Remote} {NumPresses} times
-PressKey press {Key} on {Remote} remote {NumPresses} times
-PressKey press {Key} key on remote {Remote} {NumPresses} times
-PressKey press {Key} key on {Remote} remote {NumPresses} times
-PressKey press key {Key} on remote {Remote} {NumPresses} times
-PressKey press {Key} key on {Remote} remote {NumPresses} times
+GetKeysIntent get keys for {Remote}
+GetKeysIntent get keys for remote {Remote}
+GetKeysIntent get keys for {Remote} remote
+GetKeysIntent list keys for {Remote}
+GetKeysIntent list keys for remote {Remote}
+GetKeysIntent list keys for {Remote} remote
 
 
-ChangeChannel change channel {Channel}
-ChangeChannel change channel to {Channel}
-ChangeChannel change channel {Channel} with {Remote}
-ChangeChannel change channel to {Channel} with {Remote}
-ChangeChannel change channel {Channel} with remote {Remote}
-ChangeChannel change channel to {Channel} with remote {Remote}
-ChangeChannel change channel {Channel} with {Remote} remote
-ChangeChannel change channel to {Channel} with {Remote} remote
+PressKeyIntent press {Key}
+PressKeyIntent press {Key} key
+PressKeyIntent press key {Key}
+PressKeyIntent press {Key} on {Remote}
+PressKeyIntent press {Key} key on {Remote}
+PressKeyIntent press key {Key} on {Remote}
+PressKeyIntent press {Key} on remote {Remote}
+PressKeyIntent press {Key} on {Remote} remote
+PressKeyIntent press {Key} key on remote {Remote}
+PressKeyIntent press {Key} key on {Remote} remote
+PressKeyIntent press key {Key} on remote {Remote}
+PressKeyIntent press {Key} key on {Remote} remote
+
+PressKeyIntent press {Key} {NumPresses} times
+PressKeyIntent press {Key} key {NumPresses} times
+PressKeyIntent press key {Key} {NumPresses} times
+PressKeyIntent press {Key} on {Remote} {NumPresses} times
+PressKeyIntent press {Key} key on {Remote} {NumPresses} times
+PressKeyIntent press key {Key} on {Remote} {NumPresses} times
+PressKeyIntent press {Key} on remote {Remote} {NumPresses} times
+PressKeyIntent press {Key} on {Remote} remote {NumPresses} times
+PressKeyIntent press {Key} key on remote {Remote} {NumPresses} times
+PressKeyIntent press {Key} key on {Remote} remote {NumPresses} times
+PressKeyIntent press key {Key} on remote {Remote} {NumPresses} times
+PressKeyIntent press {Key} key on {Remote} remote {NumPresses} times
 
 
-Turn turn {Option} {Target}
-Turn turn {Option} {Target} with {Remote}
-Turn turn {Option} {Target} with remote {Remote}
-Turn turn {Option} {Target} with {Remote} remote
+ChangeChannelIntent change channel {Channel}
+ChangeChannelIntent change channel to {Channel}
+ChangeChannelIntent change channel {Channel} with {Remote}
+ChangeChannelIntent change channel to {Channel} with {Remote}
+ChangeChannelIntent change channel {Channel} with remote {Remote}
+ChangeChannelIntent change channel to {Channel} with remote {Remote}
+ChangeChannelIntent change channel {Channel} with {Remote} remote
+ChangeChannelIntent change channel to {Channel} with {Remote} remote
 
-Turn turn {Option} {Target} {NumTimes}
-Turn turn {Option} {Target} {NumTimes} times
-Turn turn {Option} {Target} with {Remote} {NumTimes}
-Turn turn {Option} {Target} with {Remote} {NumTimes} times
-Turn turn {Option} {Target} with remote {Remote} {NumTimes}
-Turn turn {Option} {Target} with remote {Remote} {NumTimes} times
-Turn turn {Option} {Target} with {Remote} remote {NumTimes}
-Turn turn {Option} {Target} with {Remote} remote {NumTimes} times
+
+TurnIntent turn {Option} {Target}
+TurnIntent turn {Option} {Target} with {Remote}
+TurnIntent turn {Option} {Target} with remote {Remote}
+TurnIntent turn {Option} {Target} with {Remote} remote
+
+TurnIntent turn {Option} {Target} {NumTimes}
+TurnIntent turn {Option} {Target} {NumTimes} times
+TurnIntent turn {Option} {Target} with {Remote} {NumTimes}
+TurnIntent turn {Option} {Target} with {Remote} {NumTimes} times
+TurnIntent turn {Option} {Target} with remote {Remote} {NumTimes}
+TurnIntent turn {Option} {Target} with remote {Remote} {NumTimes} times
+TurnIntent turn {Option} {Target} with {Remote} remote {NumTimes}
+TurnIntent turn {Option} {Target} with {Remote} remote {NumTimes} times
 
 
 AMAZON.HelpIntent help
 AMAZON.HelpIntent usage
-

@@ -97,38 +97,6 @@ def press_key_route(remote_name, key_name):
     return jsonify({'remote': remote_name, 'key': key_name, 'irsend_rv': irsend_rv})
 
 
-@app.route('/remotes/<remote_name>/keys/<key_name>')
-def press_key_route_old(remote_name, key_name):
-    """
-    DEPRECATED - use press_key_route() above
-
-    Press a given key on a given remote a single time.
-    """
-    remote = get_remote(remote_name)
-    irsend_rv = press_key(remote, key_name)
-    logging.info("Pressing key %s %s.", key_name, "SUCCEEDED" if not irsend_rv else "FAILED")
-    return jsonify({'remote': remote_name, 'key': key_name, 'irsend_rv': irsend_rv})
-
-
-@app.route('/remotes/<remote_name>/keys/<key_name>/<number_of_presses>')
-def press_key_multi_route(remote_name, key_name, number_of_presses):
-    """
-    DEPRECATED - use press_key_route() above with the num-presses query param in the URL
-
-    Press a given key on a given remote a given number of times.
-    """
-    remote = get_remote(remote_name)
-    num_presses = parse_int_from_url(number_of_presses)
-
-    if num_presses < 1:
-        raise InvalidAPIUsageException(
-            "The number of presses parameter must be >= 1. '{0}' was passed.".format(num_presses))
-
-    irsend_rv = press_key(remote, key_name, num_presses=num_presses)
-    logging.info("Pressing key %s %d times %s.", key_name, num_presses, "SUCCEEDED" if not irsend_rv else "FAILED")
-    return jsonify({'remote': remote_name, 'key': key_name, 'irsend_rv': irsend_rv})
-
-
 @app.route('/remotes/<remote_name>/change_channel/<channel>')
 def change_channel_route(remote_name, channel):
     """

@@ -39,10 +39,10 @@ function deploy-lambda-function {
     printf "Deploying Lambda function to %s\n\n" ${LAMBDA_FUNCTION_S3_BUCKET}
     printf "Zipping up Lambda function\n"
     rm -f ${LAMBDA_FUNCTION_ZIP}
-    zip -r ${LAMBDA_FUNCTION_ZIP} * >/dev/null
+    zip -r ${LAMBDA_FUNCTION_ZIP} * -x \*test_events\* >/dev/null
 
     printf "\nUploading zip to S3\n"
-    aws s3 mv ${LAMBDA_FUNCTION_ZIP} s3://${LAMBDA_FUNCTION_S3_BUCKET}/${LAMBDA_FUNCTION_ZIP}
+    aws s3 cp ${LAMBDA_FUNCTION_ZIP} s3://${LAMBDA_FUNCTION_S3_BUCKET}/${LAMBDA_FUNCTION_ZIP}
     printf "     Modify Time     |  Size  |  Key\n"
     aws s3 ls s3://${LAMBDA_FUNCTION_S3_BUCKET} --human-readable --summarize
 

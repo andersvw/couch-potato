@@ -1,10 +1,10 @@
 {
   "intents": [
     {
-      "intent": "GetRemotes"
+      "intent": "GetRemotesIntent"
     },
     {
-      "intent": "GetKeys",
+      "intent": "GetKeysIntent",
       "slots": [
         {
           "name": "Remote",
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "intent": "PressKey",
+      "intent": "PressKeyIntent",
       "slots": [
         {
           "name": "Key",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "intent": "ChangeChannel",
+      "intent": "ChangeChannelIntent",
       "slots": [
         {
           "name": "Channel",
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "intent": "Turn",
+      "intent": "TurnIntent",
       "slots": [
         {
           "name": "Option",
