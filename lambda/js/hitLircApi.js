@@ -97,11 +97,52 @@ function changeChannel() {
     var options = baseOptions;
 
     const remote = handler.event.request.intent.slots.Remote.value || defaultRemote;
-    const channel = handler.event.request.intent.slots.Channel.value;
+    var channel = handler.event.request.intent.slots.Channel.value;
 
     if (isNaN(channel)) {
-        // Look up channel name -> number mapping
         // TODO: Create DDB table and implement look up
+        console.log("Channel = " + channel)
+        switch (channel.toUpperCase()) {
+            case "CBS":
+                channel = 804;
+                break;
+            case "ABC":
+                channel = 805;
+                break;
+            case "FOX":
+                channel = 806;
+                break;
+            case "NBC":
+                channel = 807;
+                break;
+            case "NHL NETWORK":
+                channel = 822;
+                break;
+            case "ESPN":
+                channel = 849;
+                break;
+            case "COMEDY CENTRAL":
+                channel = 858;
+                break;
+            case "AMC":
+                channel = 859;
+                break;
+            case "CARTOON NETWORK":
+                channel = 860;
+                break;
+            case "HBO SIGNATURE":
+                channel = 869;
+                break;
+            case "HBO":
+                channel = 870;
+                break;
+            case "HBO2":
+                channel = 871;
+                break;
+            default:
+                // do nothing, backend will fail request due to NaN
+                break;
+        }
     }
     options.path = '/remotes/' + remote + '/change_channel/' + channel;
 
