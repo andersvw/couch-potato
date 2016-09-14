@@ -3,10 +3,12 @@
 set -e
 
 RPI_USER=pi
-RPI_IP=10.0.0.91
+RPI_IP=192.168.2.2
 
 WEBAPP_DIR=webapp
 WEBAPP_DEST=/home/${RPI_USER}
+WEBAPP_NAME="app.py"
+WEBAPP_NAME_REGEX="[${WEBAPP_NAME:0:1}]${WEBAPP_NAME:1}" # This is a hack to avoid process name matching collisions
 
 LAMBDA_FUNCTION_CODE_DIR=lambda/js
 LAMBDA_FUNCTION_NAME="hitLircApi"
@@ -61,10 +63,10 @@ function deploy-webapp {
     rsync -rav -e ssh --exclude '*.pyc' --include '*' ${WEBAPP_DIR} ${RPI_USER}@${RPI_IP}:${WEBAPP_DEST}
 
     printf "\nKilling previous running version of couch-potato webapp\n"
-    ssh ${RPI_USER}@${RPI_IP} "pkill -f app.py"
+    ssh ${RPI_USER}@${RPI_IP} "if pgrep -f ${WEBAPP_NAME_REGEX} ; then pkill -f ${WEBAPP_NAME_REGEX} ; fi"
 
     printf "\nStarting couch-potato webapp\n"
-    ssh ${RPI_USER}@${RPI_IP} "cd ${WEBAPP_DEST}/${WEBAPP_DIR}; nohup python app.py > /dev/null 2> /dev/null < /dev/null &"
+    ssh ${RPI_USER}@${RPI_IP} "cd ${WEBAPP_DEST}/${WEBAPP_DIR}; nohup python ${WEBAPP_NAME} > /dev/null 2> /dev/null < /dev/null &"
     print-separator
 }
 

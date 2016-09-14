@@ -14,7 +14,7 @@ const turnIntentUsage = "The Turn intent is used to perform certain options on a
                          on, off, up, and down. Supported targets are: TV, and options.";
 
 var baseOptions = {
-    host: '50.176.83.131',
+    host: '73.238.253.254',
     port: '5000',
     path: '/',
     method: 'GET'
