@@ -52,6 +52,12 @@ def handle_invalid_api_usage(error):
     return response
 
 
+""" BEFORE REQUEST """
+@app.before_request
+def pre_request_logging():
+    logging.info("Received a %s request for %s.", request.method, request.full_path)
+
+
 """ ROUTES """
 @app.route('/')
 def index_route():
