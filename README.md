@@ -13,9 +13,9 @@ Above is the chronological ordering of the components when completing a request.
 
 Example requests:
 - "Alexa ask Couch Potato to list remotes" - Lists all of the available remotes
-- "Alexa ask Couch Potato to list keys for {Remote}" - Lists all of the mapped keys for a given remote
+- "Alexa ask Couch Potato to list keys for `{Remote}`" - Lists all of the mapped keys for a given remote
 - "Alexa ask Couch Potato to press key mute" - Presses the mute key
-- "Alexa ask Couch Potato to change channel to {Channel}" - Change the channel to a given channel, i.e. HBO or 870
+- "Alexa ask Couch Potato to change channel to `{Channel}`" - Change the channel to a given channel, i.e. HBO or 870
 - "Alexa ask Couch Potato to turn on TV" - Turns on the television
 - "Alexa ask Couch Potato to turn up the volume 5 times" - Presses the volume down key 5x
 
